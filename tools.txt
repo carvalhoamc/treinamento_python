@@ -1,0 +1,10 @@
+Bibliotecas necessárias:
+
+1)https://imbalanced-learn.org/en/stable/install.html (precisa ser instalada)
+2)https://scikit-learn.org/stable/
+3)http://www.statsmodels.org/stable/index.html (precisa ser instalada)
+4)https://pandas.pydata.org/
+5)https://bokeh.pydata.org/en/latest/ (precisa ser instalada)
+
+A maioria dos pacotes podem ser instalados via CONDA.
+Caso não esteja disponivel através do conda, o pacote pode ser instalado via PIP.
