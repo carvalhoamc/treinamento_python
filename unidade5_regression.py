@@ -8,9 +8,9 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import KFold
 from sklearn.neural_network import MLPRegressor
 from sklearn.svm import SVR
-from sklearn import ensemble
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import scale
+from sklearn.ensemble import GradientBoostingRegressor
 
 df = pd.read_csv('parkinsons_updrs.csv')
 cols = df.columns.tolist()
@@ -38,10 +38,9 @@ kf = KFold(n_splits=nfolds,shuffle=True)
 params = {'n_estimators': 500,
           'max_depth': 4,
           'min_samples_split': 2,
-          'learing_rate': 0.0001,
           'loss': 'ls'}
 
-regress = {'BOOST': ensemble.GradienteBoostingRegressor(**params),
+regress = {'BOOST': GradientBoostingRegressor(**params),
            'RF': RandomForestRegressor(n_estimators=1000, n_jobs=-1),
            'LINR': linear_model.SGDRegressor(max_iter=500, tol=1e-6),
            'MLP': MLPRegressor(hidden_layer_sizes=(100 ),max_iter=500),
