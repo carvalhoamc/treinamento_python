@@ -55,8 +55,8 @@ print('3D array')
 print(c)
 #forca impressao do array completo
 np.set_printoptions(threshold=np.nan)
-print(np.arange(10000))
-print(np.arange(10000).reshape(100,100))
+print(np.arange(100))
+print(np.arange(100).reshape(10,10))
 
 #operacoes basicas
 a = np.array( [20,30,40,50] )
